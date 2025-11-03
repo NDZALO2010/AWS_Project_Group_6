@@ -1,0 +1,171 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #fff;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* Features */
+#features {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.feature {
+    text-align: center;
+    flex: 1;
+    margin: 0 1rem;
+}
+
+.feature a {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+/* Menu */
+#menu {
+    text-align: center;
+}
+
+.menu-item {
+    display: inline-block;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    transition: transform 0.3s;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+.menu-item img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.price {
+    font-weight: bold;
+    color: #000;
+}
+
+/* Forms */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #features {
+        flex-direction: column;
+    }
+    .menu-item {
+        display: block;
+        margin: 1rem 0;
+    }
+}
