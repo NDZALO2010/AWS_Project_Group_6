@@ -19,4 +19,5 @@
 
 - [x] Move index.html to root directory
 - [x] Update paths in index.html for CSS, JS, images, and other HTML links
+- [x] Update navigation links in structure/ HTML files to point to root index.html
 - [x] Commit and push changes
