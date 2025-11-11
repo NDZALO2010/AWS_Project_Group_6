@@ -35,20 +35,30 @@ document.addEventListener('DOMContentLoaded', function() {
     // Booking form
     const reservationForm = document.getElementById('reservationForm');
     if (reservationForm) {
-        reservationForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert('Booking submitted! Redirecting to confirmation page.');
-            window.location.href = 'confirmation.html';
-        });
+        reservationForm.onsubmit = function() {
+            alert('Table booked! You will receive a confirmation soon.');
+            return true;
+        };
     }
 
     // Order form
     const orderForm = document.getElementById('orderForm');
     if (orderForm) {
-        orderForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert('Order submitted! Redirecting to confirmation page.');
-            window.location.href = 'confirmation.html';
-        });
+        orderForm.onsubmit = function() {
+            alert('Order sent! You will receive a confirmation soon.');
+            return true;
+        };
     }
+
+    // Menu item image click to show description
+    const menuImages = document.querySelectorAll('.menu-item img');
+    menuImages.forEach(img => {
+        img.addEventListener('click', function() {
+            const menuItem = this.parentElement;
+            const description = menuItem.querySelector('p:not(.price)');
+            if (description) {
+                alert(description.textContent);
+            }
+        });
+    });
 });

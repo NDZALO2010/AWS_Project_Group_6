@@ -24,7 +24,12 @@
     <main>
         <section id="booking-form">
             <h2>Reservation Form</h2>
-            <form id="reservationForm">
+            <form action="https://api.web3forms.com/submit" method="POST" id="reservationForm">
+                <input type="hidden" name="access_key" value="832b5da9-a812-4e8f-988c-4d33655ce79c">
+                <input type="hidden" name="subject" value="New Table Booking at Nastro Bliss">
+                <input type="hidden" name="from_name" value="Nastro Bliss Restaurant">
+                <input type="hidden" name="redirect" value="https://yourwebsite.com/thanks.html">
+
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
 

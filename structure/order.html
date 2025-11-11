@@ -24,53 +24,56 @@
     <main>
         <section id="order-form">
             <h2>Place Your Order</h2>
-            <form id="orderForm">
+            <form action="https://api.web3forms.com/submit" method="POST" id="orderForm">
+                <input type="hidden" name="access_key" value="832b5da9-a812-4e8f-988c-4d33655ce79c">
+                <input type="hidden" name="subject" value="New Order at Nastro Bliss">
+                <input type="hidden" name="from_name" value="Nastro Bliss Restaurant">
+                <input type="hidden" name="redirect" value="https://yourwebsite.com/thanks.html">
+
                 <label for="customerName">Name:</label>
-                <input type="text" id="customerName" name="customerName" required>
+                <input type="text" id="customerName" name="name" required>
 
                 <label for="customerEmail">Email:</label>
-                <input type="email" id="customerEmail" name="customerEmail" required>
+                <input type="email" id="customerEmail" name="email" required>
 
-                <label for="item">Select Item:</label>
-                <select id="item" name="item" required>
-                    <option value="">Choose an item</option>
-                    <optgroup label="Meals">
-                        <option value="Pasta Primavera">Pasta Primavera - R90.00</option>
-                        <option value="Grilled Salmon">Grilled Salmon - R68.99</option>
-                        <option value="Beef Steak">Beef Steak - R122.99</option>
-                        <option value="Grilled Chicken">Grilled Chicken - R85.00</option>
-                        <option value="Vegetable Stir Fry">Vegetable Stir Fry - R75.00</option>
-                        <option value="Lamb Chops">Lamb Chops - R110.00</option>
-                        <option value="Seafood Paella">Seafood Paella - R95.00</option>
-                        <option value="Beef Burger">Beef Burger - R80.00</option>
-                        <option value="Chicken Curry">Chicken Curry - R88.00</option>
-                        <option value="Fish and Chips">Fish and Chips - R92.00</option>
-                    </optgroup>
-                    <optgroup label="Drinks">
-                        <option value="Coffee">Coffee - R20.00</option>
-                        <option value="Tea">Tea - R15.00</option>
-                        <option value="Fresh Juice">Fresh Juice - R25.00</option>
-                        <option value="Soda">Soda - R18.00</option>
-                        <option value="Smoothie">Smoothie - R30.00</option>
-                        <option value="Sparkling Water">Sparkling Water - R12.00</option>
-                        <option value="Cocktail">Cocktail - R45.00</option>
-                        <option value="Wine">Wine - R50.00</option>
-                    </optgroup>
-                    <optgroup label="Desserts">
-                        <option value="Chocolate Cake">Chocolate Cake - R35.00</option>
-                        <option value="Ice Cream">Ice Cream - R25.00</option>
-                        <option value="Cheesecake">Cheesecake - R40.00</option>
-                        <option value="Tiramisu">Tiramisu - R38.00</option>
-                        <option value="Pudding">Pudding - R22.00</option>
-                        <option value="Apple Pie">Apple Pie - R30.00</option>
-                        <option value="Chocolate Mousse">Chocolate Mousse - R28.00</option>
-                        <option value="Fruit Tart">Fruit Tart - R32.00</option>
-                        <option value="Brownie">Brownie - R26.00</option>
-                    </optgroup>
+                <label for="meals">Select Meals (hold Ctrl to select multiple):</label>
+                <select id="meals" name="meals[]" multiple>
+                    <option value="Pasta Primavera - R90.00">Pasta Primavera - R90.00</option>
+                    <option value="Grilled Salmon - R68.99">Grilled Salmon - R68.99</option>
+                    <option value="Beef Steak - R122.99">Beef Steak - R122.99</option>
+                    <option value="Grilled Chicken - R85.00">Grilled Chicken - R85.00</option>
+                    <option value="Vegetable Stir Fry - R75.00">Vegetable Stir Fry - R75.00</option>
+                    <option value="Lamb Chops - R110.00">Lamb Chops - R110.00</option>
+                    <option value="Seafood Paella - R95.00">Seafood Paella - R95.00</option>
+                    <option value="Beef Burger - R80.00">Beef Burger - R80.00</option>
+                    <option value="Chicken Curry - R88.00">Chicken Curry - R88.00</option>
+                    <option value="Fish and Chips - R92.00">Fish and Chips - R92.00</option>
                 </select>
 
-                <label for="quantity">Quantity:</label>
-                <input type="number" id="quantity" name="quantity" min="1" required>
+                <label for="drinks">Select Drinks (hold Ctrl to select multiple):</label>
+                <select id="drinks" name="drinks[]" multiple>
+                    <option value="Coffee - R20.00">Coffee - R20.00</option>
+                    <option value="Tea - R15.00">Tea - R15.00</option>
+                    <option value="Fresh Juice - R25.00">Fresh Juice - R25.00</option>
+                    <option value="Soda - R18.00">Soda - R18.00</option>
+                    <option value="Smoothie - R30.00">Smoothie - R30.00</option>
+                    <option value="Sparkling Water - R12.00">Sparkling Water - R12.00</option>
+                    <option value="Cocktail - R45.00">Cocktail - R45.00</option>
+                    <option value="Wine - R50.00">Wine - R50.00</option>
+                </select>
+
+                <label for="desserts">Select Desserts (hold Ctrl to select multiple):</label>
+                <select id="desserts" name="desserts[]" multiple>
+                    <option value="Chocolate Cake - R35.00">Chocolate Cake - R35.00</option>
+                    <option value="Ice Cream - R25.00">Ice Cream - R25.00</option>
+                    <option value="Cheesecake - R40.00">Cheesecake - R40.00</option>
+                    <option value="Tiramisu - R38.00">Tiramisu - R38.00</option>
+                    <option value="Pudding - R22.00">Pudding - R22.00</option>
+                    <option value="Apple Pie - R30.00">Apple Pie - R30.00</option>
+                    <option value="Chocolate Mousse - R28.00">Chocolate Mousse - R28.00</option>
+                    <option value="Fruit Tart - R32.00">Fruit Tart - R32.00</option>
+                    <option value="Brownie - R26.00">Brownie - R26.00</option>
+                </select>
 
                 <button type="submit">Submit Order</button>
             </form>
